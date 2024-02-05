@@ -1,0 +1,1 @@
+export const defaultXPCount = 0;
