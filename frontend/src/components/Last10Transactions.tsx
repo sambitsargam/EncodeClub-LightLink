@@ -54,6 +54,7 @@ const Last10Transactions: React.FC<Last10TransactionsProps> = ({ transactions })
         const ethUsdPrice = parseFloat(data.result.ethusd);
         setEthereumPrice(ethUsdPrice);
         console.log('Live Ethereum Price:', ethUsdPrice);
+        console.log(currentDate);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
