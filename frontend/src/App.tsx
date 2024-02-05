@@ -18,6 +18,7 @@ import Quest7 from './pages/Quest7.tsx';
 import Quest8 from './pages/Quest8.tsx';
 import HomePageTrack from './pages/HomePage_track.tsx';
 import AddressPage from './pages/AddressPage.tsx';
+import ClaimPage from './pages/Claim.tsx';
 
 
 const lightlink: Chain = {
@@ -84,6 +85,7 @@ const App = () => {
                 <Route path="/quest_7" element={<Quest7 />} />
                 <Route path="/quest_8" element={<Quest8 />} />
                 <Route path="/voting" element = {<HomePagePower />} />
+                <Route path="/claim" element={<ClaimPage />} />
                 <Route path='/explorer' element={!window.location.search.includes('?address=') ? <HomePageTrack /> : <AddressPage />}/>
               </Routes>
             </main>
