@@ -62,32 +62,7 @@ const Last10Transactions: React.FC<Last10TransactionsProps> = ({ transactions })
     fetchData();
   }, []);
 
-  const calculateTimeAgo = (timestamp: number): string => {
-    if (!currentDate) {
-      return '';
-    }
 
-    const millisecondsAgo = currentDate - timestamp;
-    const secondsAgo = millisecondsAgo / 1000;
-    const minutesAgo = secondsAgo / 60;
-    const hoursAgo = minutesAgo / 60;
-
-    if (displayAgeAsTimestamp) {
-      const date = new Date(timestamp);
-      return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
-    } else if (hoursAgo < 1) {
-      const minutes = Math.floor(minutesAgo);
-      return `${minutes} min ago`;
-    } else if (hoursAgo < 24) {
-      const hours = Math.floor(hoursAgo);
-      const minutes = Math.floor((hoursAgo - hours) * 60);
-      return `${hours} hr ${minutes} min ago`;
-    } else {
-      const days = Math.floor(millisecondsAgo / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((millisecondsAgo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      return `${days} days ${hours} hrs ago`;
-    }
-  };
 
   const toggleDisplay = () => {
     setDisplayInUsdt(!displayInUsdt);

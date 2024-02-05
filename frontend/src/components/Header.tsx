@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { FC,useEffect} from 'react';
+import { FC,useEffect} from 'react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useNavigate } from 'react-router-dom';
 import { newUser } from './UserContext'; 
@@ -31,9 +31,6 @@ const Header: FC = () => {
     navigate('/explorer')
   };
 
-  const handleCheckIn = () => {
-    setXPCount(xpCount + 1);
-  };
 
   useEffect(() => {
     const storedXPCount = localStorage.getItem('xpCount');
