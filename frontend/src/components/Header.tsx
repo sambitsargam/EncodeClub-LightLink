@@ -30,6 +30,9 @@ const Header: FC = () => {
   const handleExplorer = () => {
     navigate('/explorer')
   };
+  const Claim = () => {
+    navigate('/claim')
+  }
 
 
   useEffect(() => {
@@ -78,6 +81,12 @@ const Header: FC = () => {
                   XP: {xpCount}
                 </div>
               </div>
+              <button
+                className="rounded-full bg-transparent text-white border border-purple-500 px-4 py-2 cursor-pointer"
+                onClick={Claim}
+              >
+                Claim XP
+              </button>
             </>
           )}
           <ConnectButton label="Connect" accountStatus={{ smallScreen: 'avatar', largeScreen: 'full' }} />
