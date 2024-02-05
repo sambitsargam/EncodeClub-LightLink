@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { FC,useEffect} from 'react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useNavigate } from 'react-router-dom';
@@ -30,11 +31,7 @@ const Header: FC = () => {
     navigate('/explorer')
   };
 
-
-  const [isCheckInModalOpen, setCheckInModalOpen] = React.useState(false);
-
   const handleCheckIn = () => {
-    setCheckInModalOpen(false);
     setXPCount(xpCount + 1);
   };
 
@@ -86,7 +83,7 @@ const Header: FC = () => {
               </div>
             </>
           )}
-          <ConnectButton label="Sign in" accountStatus={{ smallScreen: 'avatar', largeScreen: 'full' }} />
+          <ConnectButton label="Connect" accountStatus={{ smallScreen: 'avatar', largeScreen: 'full' }} />
         </div>
       </div>
     </nav>
